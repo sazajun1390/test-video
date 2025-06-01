@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const repo = process.env.REPO_NAME || '';
-const isGithubPages = process.env.NODE_ENV === 'production';
+const isGithubPages = process.env.GITHUB_PAGES === 'true';
+
 
 const nextConfig: NextConfig = {
   /* config options here */
