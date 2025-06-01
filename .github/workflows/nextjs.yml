@@ -38,7 +38,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set environment variable
-        run: echo "REPO_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+        run: | 
+          echo "REPO_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+          echo ${GITHUB_REPOSITORY#*/}
       - name: Detect package manager
         id: detect-package-manager
         run: |
